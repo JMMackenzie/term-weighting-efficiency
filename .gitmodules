@@ -1,0 +1,12 @@
+[submodule "pisa"]
+	path = pisa
+	url = https://github.com/pisa-engine/pisa
+[submodule "anserini"]
+	path = anserini
+	url = https://github.com/castorini/anserini
+[submodule "anserini-ciff"]
+	path = anserini-ciff
+	url = https://github.com/osirrc/ciff
+[submodule "pisa-ciff"]
+	path = pisa-ciff
+	url = https://github.com/pisa-engine/ciff
