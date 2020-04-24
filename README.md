@@ -76,7 +76,7 @@ index, both an 'unpruned' and a 'pruned' version are generated - the pruned
 versions remove all postings which DeepCT weighted to zero. 
 
 You can download and prepare these collections with the `prepare-data.sh`
-script. For step-by-step instructions, check out the [data preparation](https://github.com/jmmackenzie/term-weighting-efficiency/data-preparation.md) 
+script. For step-by-step instructions, check out the [data preparation](https://github.com/JMMackenzie/term-weighting-efficiency/blob/master/data-preparation.md) 
 guide.
 
 Building the Indexes
@@ -84,7 +84,7 @@ Building the Indexes
 
 Assuming you have built the tools above, you can run the `build-indexes.sh`
 tool which will automatically build all of the required data. If you would
-prefer to do it yourself, refer to the [step-by-step indexing](https://github.com/jmmackenzie/term-weighting-efficiency/indexing.md) 
+prefer to do it yourself, refer to the [step-by-step indexing](https://github.com/JMMackenzie/term-weighting-efficiency/blob/master/indexing.md) 
 guide.
 
 Running the Queries
@@ -93,5 +93,5 @@ Again, assuming the tools have been build and you have built the indexes, you
 can run the queries in two ways. Firstly, the `search-effectiveness.sh` script
 will conduct the query processing and evaluate the results. Secondly, the
 `search-efficiency.sh` script will run the timing experiments. Detailed guides
-are presented in the [step-by-step search](https://github.com/jmmackenzie/term-weighting-efficiency/searching.md) guide.
+are presented in the [step-by-step search](https://github.com/JMMackenzie/term-weighting-efficiency/blob/master/searching.md) guide.
 
