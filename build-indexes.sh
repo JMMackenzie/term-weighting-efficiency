@@ -6,7 +6,7 @@ for collection in original-u original-p deepct-u deepct-p; do
   echo "Done."
 
   echo "Converting Anserini/Lucene index to CIFF index..."
-  ./anserini-ciff/target/appassembler/bin/ExportAnseriniLuceneIndex -index data/indexes/anserini-$collectioon -output data/indexes/ciff/$collection.ciff
+  ./anserini-ciff/target/appassembler/bin/ExportAnseriniLuceneIndex -index data/indexes/anserini-$collection -output data/indexes/ciff/$collection.ciff
   echo "Done."
 
   echo "Converting CIFF to PISA format..."
@@ -39,9 +39,14 @@ for collection in original-u original-p deepct-u deepct-p; do
     exit 1
   fi
  
-  echo "Building the lexicon..."
-    ./pisa/build/bin/lexicon build data/indexes/pisa-canonical/$collection.terms data/indexes/pisa-canonical/$collection.termlex
+  echo "Building the term lexicon..."
+  ./pisa/build/bin/lexicon build data/indexes/pisa-canonical/$collection.terms data/indexes/pisa-canonical/$collection.termlex
   echo "Done."
+
+  echo "Building the document identifier map..."
+  ./pisa/build/bin/lexicon build data/indexes/pisa-canonical/$collection.documents data/indexes/pisa-canonical/$collection.docmap
+  echo "Done."
+
 done
 
 

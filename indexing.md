@@ -80,3 +80,14 @@ Note that the BM25 parameters we use for each index differ according to a grid s
 
 ./pisa/build/bin/lexicon build data/indexes/pisa-canonical/deepct-p.terms data/indexes/pisa-canonical/deepct-p.termlex
 ```
+
+7. Build the docmap for each collection
+```
+./pisa/build/bin/lexicon build data/indexes/pisa-canonical/original-u.documents data/indexes/pisa-canonical/original-u.docmap
+
+./pisa/build/bin/lexicon build data/indexes/pisa-canonical/original-p.documents data/indexes/pisa-canonical/original-p.docmap
+
+./pisa/build/bin/lexicon build data/indexes/pisa-canonical/deepct-u.documents data/indexes/pisa-canonical/deepct-u.docmap
+
+./pisa/build/bin/lexicon build data/indexes/pisa-canonical/deepct-p.documents data/indexes/pisa-canonical/deepct-p.docmap
+```

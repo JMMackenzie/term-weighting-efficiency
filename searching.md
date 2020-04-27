@@ -1,5 +1,0 @@
-Effectiveness Evaluation
-------------------------
-
-Efficiency Evaluation
----------------------

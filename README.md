@@ -81,7 +81,6 @@ guide.
 
 Building the Indexes
 --------------------
-
 Assuming you have built the tools above, you can run the `build-indexes.sh`
 tool which will automatically build all of the required data. If you would
 prefer to do it yourself, refer to the [step-by-step indexing](https://github.com/JMMackenzie/term-weighting-efficiency/blob/master/indexing.md) 
@@ -92,6 +91,6 @@ Running the Queries
 Again, assuming the tools have been build and you have built the indexes, you
 can run the queries in two ways. Firstly, the `search-effectiveness.sh` script
 will conduct the query processing and evaluate the results. Secondly, the
-`search-efficiency.sh` script will run the timing experiments. Detailed guides
-are presented in the [step-by-step search](https://github.com/JMMackenzie/term-weighting-efficiency/blob/master/searching.md) guide.
+`search-efficiency.sh` script will run the timing experiments. Please refer
+directly to these scripts for further information. 
 
