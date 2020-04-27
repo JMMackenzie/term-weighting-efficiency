@@ -7,7 +7,7 @@ wget http://boston.lti.cs.cmu.edu/appendices/arXiv2019-DeepCT-Zhuyun-Dai/weighte
 echo "Done."
 
 echo "Validating MD5 hashes..."
-for file in original-u original-p deepct-u; do
+for file in original-u deepct-u deepct-p; do
   if md5sum -c data/raw/$file'.zip.md5'; then
     echo "$file is OK..."
   else
