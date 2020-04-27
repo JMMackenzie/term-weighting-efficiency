@@ -39,8 +39,3 @@ for collection in original-u original-p deepct-u deepct-p; do
 done
 
 echo "Done."
-
-echo "Preparing and evaluating runs..."
-cd evaluate
-./evaluate_runs.sh
-echo "Done." 

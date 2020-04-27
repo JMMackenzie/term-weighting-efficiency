@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Running all algorithms across all collections, using both stopped and unstopped query logs for k = 1000..."
 for algo in ranked_or maxscore wand block_max_wand; do 
   for collection in original-u original-p deepct-u deepct-p; do
     for query in unstopped stopped; do
@@ -34,7 +35,4 @@ for algo in ranked_or maxscore wand block_max_wand; do
     done
   done
 done
-
-cd timings
-python3 tools/get-summary.py all.tsv
-cd ..
+echo "Done."

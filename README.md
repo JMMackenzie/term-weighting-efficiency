@@ -4,13 +4,13 @@ DeepCT Efficiency Study
 Introduction
 ------------
 This repo shows how to reproduce the experiments from the following SIGIR
-short paper: **Efficiency Implications of Term Re-Weighting for Passage Retrieval**
+short paper: **Efficiency Implications of Term Weighting for Passage Retrieval**
 by Joel Mackenzie, Zhuyun Dai, Luke Gallagher, and Jamie Callan.
 
 ```
 @inproceedings{mdgc20-sigir,
  author = {J. Mackenzie and Z. Dai and L. Gallagher and J. Callan},
- title = {Efficiency Implications of Term Re-Weighting for Passage Retrieval},
+ title = {Efficiency Implications of Term Weighting for Passage Retrieval},
  booktitle = {Proc. SIGIR},
  year = {2020},
  pages = {To appear}
@@ -68,6 +68,17 @@ mvn clean package appassembler:assemble
 cd ../
 ```
 
+End to End Runs
+---------------
+If you are interested in generating an end-to-end run, simply run the
+following scripts in order.
+```
+./prepare-data.sh
+./build-indexes.sh
+./search-effectiveness.sh
+./search-efficiency.sh
+```
+
 Collections
 -----------
 We have four collections in jsonl format. They are the original MS-Marco corpus
@@ -86,11 +97,26 @@ tool which will automatically build all of the required data. If you would
 prefer to do it yourself, refer to the [step-by-step indexing](https://github.com/JMMackenzie/term-weighting-efficiency/blob/master/indexing.md) 
 guide.
 
-Running the Queries
--------------------
-Again, assuming the tools have been build and you have built the indexes, you
-can run the queries in two ways. Firstly, the `search-effectiveness.sh` script
-will conduct the query processing and evaluate the results. Secondly, the
-`search-efficiency.sh` script will run the timing experiments. Please refer
-directly to these scripts for further information. 
 
+Running Effectiveness Experiments
+---------------------------------
+The `search-effectiveness.sh` script will execute all runs and output their
+effectiveness values. The runs can be located in `evaluate/run-files` and
+a summary of the effectiveness scores can be gathered as follows:
+```
+cd evaluate
+./evaluate-runs.sh
+```
+
+Running Efficiency Experiments
+------------------------------
+The `search-efficiency.sh` script will run the timing experiments and output
+per-query efficiency values.
+After the `search-efficiency.sh` script has been executed, the results can be
+found in `timings/all.tsv` as a tab-seperated file.
+
+To get a summary of these timings:
+```
+cd timings
+python3 tools/get-summary.py all.tsv
+```
