@@ -13,7 +13,7 @@ by Joel Mackenzie, Zhuyun Dai, Luke Gallagher, and Jamie Callan.
  title = {Efficiency Implications of Term Weighting for Passage Retrieval},
  booktitle = {Proc. SIGIR},
  year = {2020},
- pages = {To appear}
+ pages = {1821--1824}
 }
 
 ```
